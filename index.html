@@ -1,61 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cadastro de Clientes</title>
-<link rel="stylesheet" href="style.css">
-<link rel ="preconnect" href="https://fonts.googleapis.com">
-<link rel ="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href ="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Clientes</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <div class="formulario-container">
-        <img 
-src="Ntcar3.jpg" alt="Logo da NTCar" class="logo">
-     <h1>Cadastro de Clientes</h1>
-   
-      <form class="duas-colunas">
-        <div class="coluna-cliente">
-            <h2>Dados do Cliente</h2>
-            <label for="nome">Nome do Cliente:</label>
-            <input type="text" id="nome" name="nome">
-           
+        <img src="Ntcar3.jpg" alt="Logo da Oficina" class="logo">
+        <h1>Cadastro de Clientes</h1>
 
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email">
-            
+        <form class="duas-colunas">
+            <div class="coluna-cliente">
+                <h2>Dados do Cliente</h2>
+                <label for="nome">Nome do Cliente:</label>
+                <input type="text" id="nome" name="nome">
 
-             <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone">
             </div>
-            
+
             <div class="coluna-veiculo">
-           <h2>Informações do Veículo</h2>
-              <label for="carro">Modelo do Carro:</label>
+                <h2>Informações do Veículo</h2>
+                <label for="carro">Modelo do Carro:</label>
                 <input type="text" id="carro" name="carro">
-            <label for="oleo">Última Troca de Óleo:</label>
-            <input type="date" id="oleo" name="oleo">
-        <label for="revisao">Última Revisão</label>
-        <input type="date" id="revisao" name="revisao">
+
+                <label for="oleo">Última Troca de Óleo:</label>
+                <input type="date" id="oleo" name="oleo">
+
+                <label for="revisao">Última Revisão:</label>
+                <input type="date" id="revisao" name="revisao">
             </div>
 
-        <button type="submit">Cadastrar Cliente</button>
+            <div class="botao-container">
+                <button type="submit">Cadastrar Cliente </button>
+            </div>
         </form>
-    <div
-    class= "lista-clientes-container">
-    <h2>Clientes Cadastrados</h2>
-    <ul id="lista-clientes">
-    </ul>
+    </div>
+
     <div class="lista-clientes-container">
         <h2>Clientes Cadastrados</h2>
-        <ul id="lista-clientes"></ul>
-    </ul>
-    <button id="limpar-clientes">Limpar Todos</button>
+        <ul id="lista-clientes">
+            </ul>
+        <button id="btn-limpar-todos">Limpar Todos</button>
     </div>
-    <script src="script.js"></script>
 
+    <script src="script.js"></script>
 </body>
-</html>
-    
 </html>

@@ -1,0 +1,137 @@
+body {
+  /* Fundo animado */
+ background-color:#000000 ;
+  font-family:sans-serif; 
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+   
+.formulario-container {
+    background-color: rgba(30 , 30, 30, 0.8);
+    padding:30px ;
+    border-radius: 10px;
+    box-shadow:0 0 15px #007bff, 0 0 30px #cc0000;
+    border: 1px solid rgba ( 0, 123, 255, 0.5);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+.logo {
+    max-width: 250px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+.duas-colunas {
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    gap: 30px;
+}
+
+.coluna-cliente, .coluna-veiculo {
+    display: flex;
+    flex-direction: column;
+}
+h1, h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+label {
+    display: block;
+   margin-bottom: 5px;
+   font-weight: bold;
+   color: #ffffff;
+   text-align: left;
+}
+input {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size:1em ;
+    width: 100%;
+}
+button {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition:background-color 0.3s ease;
+    grid-column: 1 / 3;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-weight: bold;
+
+} button:hover {
+    background-color: #990000;
+   
+}
+    /* Estilo para notificação */
+    .notification {
+        position: fixed;
+        top: 20px;
+        left: 50px;
+        transform: translateX(-50%);
+        color: white;
+        padding: 15px  30px; 
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+        opacity:0 ;
+        transition: opacity 0.5s ease;  
+    }
+    .notification.mostrar {
+        opacity: 1;
+    }
+    .notificacao.sucesso {
+        background-color: #28a745;
+    }
+    .notificacao.erro {
+        background-color: #dc3545;
+    }
+    /* Lista de clientes */
+    .lista-clientes-container {
+        background-color: rgba( 0, 0, 0, 0.8);
+        padding:30px ;
+        border-radius: 10px;
+        box-shadow:0 0 15px #007bff, 0 0 30px #cc0000; 
+        border: 1px solid rgba ( 0, 123, 255, 0.5);
+        width: 80%;
+        max-width: 800px;
+        margin-top: 20px;
+        margin-bottom:20px;
+        color: white
+    }
+    
+    #lista-clientes {
+       list-style: none;
+       padding: 0;
+       text-align: left;
+       
+       #listas-clientes li {
+        background-color: rgba (255, 255, 255, 0.1);
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+       }
+       #listas-clientes li p {
+        margin: 5px 0;
+       }
+    }
+    @media (max-width: 768px) {
+    .duas-colunas {
+        grid-template-columns: 1fr;
+    }
+    
+    }  
+
+

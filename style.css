@@ -16,7 +16,7 @@ body {
     box-shadow: 0 0 15px #007bff,
                 0 0 30px #CC0000;
     border: 1px solid rgba(0, 123, 255, 0.5);
-    width: 80%;
+    width: 95%; /* Padrão mobile-first */
     max-width: 800px;
     text-align: center;
 }
@@ -27,6 +27,7 @@ body {
     margin: 0 auto 20px auto;
 }
 
+/* O layout de duas colunas só será aplicado em telas maiores */
 .duas-colunas {
     display: flex;
     flex-direction: column;
@@ -79,13 +80,8 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #990000;
 }
-.botao-container {
-    grid-column: 1 / 3;
-    display: flex;
-    justify-content: center;
-   
-}
 
+/* Estilo para a Notificação */
 .notificacao {
     position: fixed;
     top: 20px;
@@ -112,6 +108,7 @@ button[type="submit"]:hover {
     background-color: #dc3545;
 }
 
+/* Estilo da lista de clientes e botões */
 .lista-clientes-container {
     background-color: rgba(30, 30, 30, 0.8);
     padding: 30px;
@@ -119,7 +116,7 @@ button[type="submit"]:hover {
     box-shadow: 0 0 15px #007bff,
                 0 0 30px #CC0000;
     border: 1px solid rgba(0, 123, 255, 0.5);
-    width: 80%;
+    width: 95%; /* Padrão mobile-first */
     max-width: 800px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -178,17 +175,16 @@ button[type="submit"]:hover {
 }
 
 
-/* A partir de 600px, aplique as regras de duas colunas */
+/* Aplica o layout de duas colunas somente a partir de 600px */
 @media (min-width: 600px) {
     .duas-colunas {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
+        flex-direction: column;
     }
-    botton[type="submit"] {
-        grid-column:1 / 3 ;
-    }
-    .formulario-container, .lista-clientes-container {
-        width: 80%;
+    button[type="submit"] {
+        grid-column: 1 / 1;
+    } .formulario-container , .lista-clientes-container {   
+        width: 95%;
+        text-align: left;
     }
 }

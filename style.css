@@ -183,5 +183,12 @@ button[type="submit"]:hover {
     .duas-colunas {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+    botton[type="submit"] {
+        grid-column:1 / 3 ;
+    }
+    .formulario-container, .lista-clientes-container {
+        width: 80%;
     }
 }

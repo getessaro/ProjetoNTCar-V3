@@ -16,41 +16,40 @@
         <img src="Ntcar3.jpg" alt="Logo da Oficina" class="logo">
         <h1>Cadastro de Clientes</h1>
 
-        <form class="duas-colunas">
-            <div class="coluna-cliente">
+        <form id="form-cadastro">
+            <div class="duas-colunas">
+                <div class="coluna-cliente">
                 <h2>Dados do Cliente</h2>
-                <label for="nome">Nome do Cliente:</label>
-                <input type="text" id="nome" name="nome">
+
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
                 <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email">
 
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone">
+                <input type="tel" id="telefone" name="telefone" required>
             </div>
 
             <div class="coluna-veiculo">
                 <h2>Informações do Veículo</h2>
                 <label for="carro">Modelo do Carro:</label>
-                <input type="text" id="carro" name="carro">
+                <input type="text" id="carro" name="carro" required>
 
                 <label for="oleo">Última Troca de Óleo:</label>
-                <input type="date" id="oleo" name="oleo">
+                <input type="date" id="oleo" name="oleo" required>
 
                 <label for="revisao">Última Revisão:</label>
-                <input type="date" id="revisao" name="revisao">
+                <input type="date" id="revisao" name="revisao" required>
             </div>
 
-            <div class="botao-container">
-                <button type="submit">Cadastrar Cliente </button>
-            </div>
+            <button type="submit">Cadastrar</button>
         </form>
     </div>
 
     <div class="lista-clientes-container">
-        <h2>Clientes Cadastrados</h2>
-        <ul id="lista-clientes">
-            </ul>
+        <h2>Veículos Cadastrados</h2>
+        <ul id="lista-clientes"></ul>
         <button id="btn-limpar-todos">Limpar Todos</button>
     </div>
 
